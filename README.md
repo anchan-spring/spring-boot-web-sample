@@ -1,10 +1,4 @@
-# Spring MVC サンプルプロジェクト
-
-## クラス図
-
-http://192.168.11.20:18080/uml/AqXCpavCJrL8hKZCBSX9rKlApozHgERYKaZEIImkLWWkAChCItS22eQd9WM3bJWM5EHa9YUMPERd0HKgA6Whv2Pcvca4bu1KHiTgMfNbPwPmATHoAUJbbwGgvAIcbLWfF6vQzBXv-kFcLO-RDZvktlEuQVlZvkMFcpS_RfhqTDty5mjxW3OMG9sId9zNKfIVavDQ13OVuX2Fr9oSV6TK6Q3L6I1X3T_ybDGSJIi5Y1k0ChLmVPvvAQaLcFeoGS9e-XGW6c4EByali4fCIKii1cAkMW00
-
-クラス図を更新する度に上記URLを更新すること
+# Spring Boot MVC サンプル
 
 ## 使用しているSpringBoot
 
