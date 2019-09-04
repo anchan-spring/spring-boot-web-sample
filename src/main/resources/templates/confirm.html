@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
   <head>
     <meta charset="UTF-8" />
       <title>確認画面</title>
   </head>
   <body>
+  <form action="/confirm" method="post" >
     <p th:text="'入力メッセージ：' + ${InputEntity.message}"/>
+    <input type="submit" name="doBack" value="戻る" />
+    <input type="submit" name="doComplete" value="完了" />
+  </form>
   </body>
+
 </html>

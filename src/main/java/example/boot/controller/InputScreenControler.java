@@ -11,7 +11,7 @@ import example.boot.entity.InputEntity;
 @Controller
 public class InputScreenControler {
 
-  @RequestMapping("/input")
+  @RequestMapping(value = "/input", method = RequestMethod.GET)
   public String showInputScreen(Model model) {
 	model.addAttribute("InputEntity", new InputEntity());
 
@@ -27,8 +27,16 @@ public class InputScreenControler {
 	return "confirm";
   }
 
-  @RequestMapping(value = "edit", params = "doBack", method = RequestMethod.POST)
-  public String doBack() {
+  /*@RequestMapping(value = "/input", params = "doBack", method = RequestMethod.POST)
+  public String doBack(Model model) {
+	  model.addAttribute("InputEntity", new InputEntity());
 	  return "input";
   }
+
+  @RequestMapping(value = "/input", params = "doComplete", method = RequestMethod.POST)
+  public String doComplete(Model model) {
+	  //model.addAttribute("InputEntity", new InputEntity());
+	  return "complete";
+  }*/
+
 }
