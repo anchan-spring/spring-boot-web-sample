@@ -1,0 +1,20 @@
+<!DOCTYPE heml>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>入力画面</title>
+</head>
+<body>
+	<form action="#" th:action="@{/confirm}" th:object="${InputEntity}" method="post">
+	<table>
+	   <tr>
+	       <td>メッセージを入力してください</td>
+	       <td>
+	           <input type="text" th:field="*{message}" />
+	           <button type="submit">送信</button>
+	       </td>
+	   </tr>
+	</table>
+	</form>
+</body>
+</html>
