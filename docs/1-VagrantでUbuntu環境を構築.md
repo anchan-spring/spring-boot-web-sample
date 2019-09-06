@@ -167,7 +167,19 @@ ubuntuディレクトリ内に作成されたVagrantfileに設定されている
   # using a specific IP.
    config.vm.network "private_network", ip: "192.168.33.10" ・・・これをコメントアウト
 ```
-また最後の行に作成したスクリプトを実行するよう追記する。
+
+Ubuntuに構築したMySQLサーバにアクセスできるよう3306ポートの転送設定を追加する。
+
+```
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # NOTE: This will enable public access to the opened port
+  config.vm.network "forwarded_port", guest: 3306, host: 3306　・・・これを追加
+```
+
+最後の行に作成したスクリプトを実行するよう追記する。
 ```
   ・
   ・
