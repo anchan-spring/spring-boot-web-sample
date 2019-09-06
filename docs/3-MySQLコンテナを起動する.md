@@ -81,7 +81,6 @@ mysql> show databases;
 +--------------------+
 ```
 
-1. va
 ## 参考
 
 * [docker-compose＋MySQL5.7(8.0も)+初期化+永続化](https://qiita.com/juhn/items/274e44ee80354a39d872)
