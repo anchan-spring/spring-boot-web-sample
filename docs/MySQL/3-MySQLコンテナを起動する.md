@@ -5,40 +5,13 @@
 $ sudo su -
 ```
 
-2. docker-compose.ymlを配置するフォルダを作成する
-例：
+2. [spring-boo-web-sample-mysql](https://github.com/anchan-spring/spring-boo-web-sample-mysql)リポジトリをcloneする
 ```
-$ pwd
-/home/vagrant/docker/mysql
-```
-
-3. docker-compose.ymlを作成する
-```
-$cat docker-compose.yml
-version: '3'
-services:
-    db:
-        image: mysql:5.7
-        container_name: mysql-server
-        ports:
-            - "3306:3306"
-        volumes:
-            - ./db/mysql_init:/docker-entrypoint-initdb.d
-            - ./db/mysql_data:/var/lib/mysql
-        environment:
-            MYSQL_ROOT_PASSWORD: root
-            MYSQL_USER: test
-            MYSQL_PASSWORD: test
+$ cd /home/vagrant/docker
+$ git clone https://github.com/anchan-spring/spring-boo-web-sample-mysql.git
 ```
 
-4. 起動時に作成するDatabaseとTableのDDLを./db/mysql_init/create.sqlに作成する
-例:DataBaseを作成する場合
-```
-create database sample;
-use sample;
-```
-
-5. docker-compose.ymlが置いているディレクトリで下記コマンドを実行しMySQLコンテナを起動する
+3. MySQLコンテナを起動する
 ```
 $ docker-compose up -d
 ```
