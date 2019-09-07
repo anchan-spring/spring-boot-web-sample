@@ -24,14 +24,14 @@ $ docker-compose ps
 mysql-server   docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp, 33060/tcp
 ```
 
-7. mysqlコマンドをインストールする
+3. mysqlコマンドをインストールする
 ```
 $ apt-get update && apt-get -y install mysql-client
 $ mysql --version
 mysql  Ver 14.14 Distrib 5.7.27, for Linux (x86_64) using  EditLine wrapper
 ```
 
-8. MySQLに接続する
+4. MySQLに接続する
 ```
 $ mysql -h 127.0.0.1 -u root -p
 > mysql
@@ -40,7 +40,7 @@ $ mysql -h 127.0.0.1 -u root -p
 localhostでは接続できないので注意
  * https://hacknote.jp/archives/30781/
 
-9. 起動時に作成したDababaseが存在することを確認する
+5. 起動時に作成したDababaseが存在することを確認する
 ```
 mysql> show databases;
 +--------------------+
@@ -53,6 +53,9 @@ mysql> show databases;
 | sys                |
 +--------------------+
 ```
+
+※起動時には下記フォルダ配下のSQLが実行される
+ * https://github.com/anchan-spring/spring-boo-web-sample-mysql/blob/master/db/mysql_init/
 
 ## 参考
 
