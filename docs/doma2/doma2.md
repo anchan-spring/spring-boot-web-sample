@@ -53,12 +53,18 @@ spring.jpa.hibernate.ddl-auto=update
 
 ### アノテーション
 
+* クラスに付与するアノテーション
  * @ConfigAutowireable
     * @Repositoryと@Autowiredを付与するアノテーション
-  * @Repository
    * @Repository
     * Spirngのコンポーネントとして認識され、ApplicationContextに登録されることで、DI対象のクラス
     * DBとやりとりするクラス、つまりDAOクラスに付与するアノテーション
+   * @Autowired
+    * DBとやりとりするクラス、つまりDAOクラスに付与するアノテーション
+    
+* メソッドに付与するアノテーション
+ * @Select
+    * SELECT文に付与するアノテーション
 
 ## 参考URL
 
