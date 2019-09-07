@@ -56,7 +56,7 @@ mysql> show databases;
 | information_schema |
 | mysql              |
 | performance_schema |
-| sample             |
+| spring_web_sample  |
 | sys                |
 +--------------------+
 ```
