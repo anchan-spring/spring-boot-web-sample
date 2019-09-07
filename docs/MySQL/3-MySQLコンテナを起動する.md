@@ -1,22 +1,29 @@
 # 3-MySQLコンテナを起動する
 
-1. rootユーザにスイッチ
+1. rootユーザにスイッチする
 ```
 $ sudo su -
 ```
 
-2. [spring-boo-web-sample-mysql](https://github.com/anchan-spring/spring-boo-web-sample-mysql)リポジトリをcloneする
+2. gitコマンドをインストールする
+```
+$ apt-get install git
+$ git --version
+git version 2.7.4
+```
+
+3. [spring-boo-web-sample-mysql](https://github.com/anchan-spring/spring-boo-web-sample-mysql)リポジトリをcloneする
 ```
 $ cd /home/vagrant/docker
 $ git clone https://github.com/anchan-spring/spring-boo-web-sample-mysql.git
 ```
 
-3. MySQLコンテナを起動する
+4. MySQLコンテナを起動する
 ```
 $ docker-compose up -d
 ```
 
-6. 起動したことを確認する
+5. 起動したことを確認する
 ```
 $ docker-compose ps
     Name                 Command             State                 Ports
@@ -24,14 +31,14 @@ $ docker-compose ps
 mysql-server   docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp, 33060/tcp
 ```
 
-3. mysqlコマンドをインストールする
+6. mysqlコマンドをインストールする
 ```
 $ apt-get update && apt-get -y install mysql-client
 $ mysql --version
 mysql  Ver 14.14 Distrib 5.7.27, for Linux (x86_64) using  EditLine wrapper
 ```
 
-4. MySQLに接続する
+7. MySQLに接続する
 ```
 $ mysql -h 127.0.0.1 -u root -p
 > mysql
@@ -40,7 +47,7 @@ $ mysql -h 127.0.0.1 -u root -p
 localhostでは接続できないので注意
  * https://hacknote.jp/archives/30781/
 
-5. 起動時に作成したDababaseが存在することを確認する
+8. 起動時に作成したDababaseが存在することを確認する
 ```
 mysql> show databases;
 +--------------------+
