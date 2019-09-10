@@ -42,11 +42,10 @@ public class UploadScreenControler {
 		String nowTime = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS").format(LocalDateTime.now());
 
 		//アップロード先にファイル作成
-		//TODO
-		//String aa = env.getProperty("spring.jpa.database");
-		Path uploadFile = Paths.get("C:/upload/" + fileName + "_" + nowTime + extension);
+		String uploadFolderPath = env.getProperty("spring.upload.path");
+		//Path uploadFile = Paths.get("C:/upload/" + fileName + "_" + nowTime + extension);
+		Path uploadFile = Paths.get(uploadFolderPath + fileName + "_" + nowTime + extension);
 
-		//
 		try {
 			OutputStream outputStream = Files.newOutputStream(uploadFile, StandardOpenOption.CREATE);
 			outputStream.write(uploadEnt.getFile().getBytes());
