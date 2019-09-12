@@ -1,5 +1,6 @@
 package example.boot.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,9 +12,13 @@ import example.boot.entity.InputEntity;
 @Controller
 public class InputScreenControler {
 
+  @Autowired
+  private InputEntity inputEntity;
+
   @RequestMapping(value = "/input", method = RequestMethod.GET)
   public String showInputScreen(Model model) {
-	model.addAttribute("InputEntity", new InputEntity());
+	//model.addAttribute("InputEntity", new InputEntity());
+	model.addAttribute("InputEntity", inputEntity);
 
 	// ビュー名として"hello"を返却
 	// Viewは下記となる

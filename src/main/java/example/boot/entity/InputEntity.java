@@ -1,5 +1,8 @@
 package example.boot.entity;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class InputEntity {
 
 	private String message;
