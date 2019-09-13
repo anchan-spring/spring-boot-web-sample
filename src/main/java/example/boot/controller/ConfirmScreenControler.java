@@ -12,8 +12,13 @@ import example.boot.entity.InputEntity;
 @Controller
 public class ConfirmScreenControler {
 
-  @Autowired
   private InputEntity inputEntity;
+
+  //セッターインジェクション
+  @Autowired
+  private void setInject(InputEntity inputEntity) {
+	  this.inputEntity = inputEntity;
+  }
 
   @RequestMapping(value = "/confirm", params = "doBack", method = RequestMethod.POST)
   public String doBack(Model model) {

@@ -12,8 +12,14 @@ import example.boot.entity.InputEntity;
 @Controller
 public class InputScreenControler {
 
-  @Autowired
   private InputEntity inputEntity;
+
+  //コンストラクタインジェクション
+  //コンストラクタ一つの場合は@Autowired省略可能
+  @Autowired
+  public InputScreenControler(InputEntity inputEntity) {
+	  this.inputEntity = inputEntity;
+  }
 
   @RequestMapping(value = "/input", method = RequestMethod.GET)
   public String showInputScreen(Model model) {
@@ -32,16 +38,5 @@ public class InputScreenControler {
 	return "confirm";
   }
 
-  /*@RequestMapping(value = "/input", params = "doBack", method = RequestMethod.POST)
-  public String doBack(Model model) {
-	  model.addAttribute("InputEntity", new InputEntity());
-	  return "input";
-  }
-
-  @RequestMapping(value = "/input", params = "doComplete", method = RequestMethod.POST)
-  public String doComplete(Model model) {
-	  //model.addAttribute("InputEntity", new InputEntity());
-	  return "complete";
-  }*/
 
 }

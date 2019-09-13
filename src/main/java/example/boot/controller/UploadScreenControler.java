@@ -24,9 +24,13 @@ public class UploadScreenControler {
     @Autowired
     private Environment env;
 
+    //フィールドインジェクション
+    @Autowired
+    private UploadEntity uploadEntity;
+
 	@RequestMapping(value = "/upload", method = RequestMethod.GET)
 	public String showUploadScreen(Model model) {
-		model.addAttribute("UploadEntity", new UploadEntity());
+		model.addAttribute("UploadEntity", uploadEntity);
 		return "upload";
 	}
 
