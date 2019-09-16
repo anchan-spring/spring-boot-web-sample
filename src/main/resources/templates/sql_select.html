@@ -1,0 +1,24 @@
+<!DOCTYPE heml>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL画面</title>
+</head>
+<body>
+    <p>下記に取得されれば取得内容が出力されます</p>
+    <div th:if="!${#lists.isEmpty(userList)}">
+    <table border=1>
+      <tr>
+        <th>USER_ID</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+      </tr>
+      <tr th:each="userEntity : ${userList}" th:Object="${userEntity}">
+        <td th:text="*{userId}"></td>
+        <td th:text="*{firstName}"></td>
+        <td th:text="*{lastName}"></td>
+      </tr>
+    </table>
+    </div>
+</body>
+</html>
