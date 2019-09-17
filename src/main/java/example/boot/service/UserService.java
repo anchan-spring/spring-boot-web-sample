@@ -17,4 +17,9 @@ public class UserService {
 	public List<UserEntity> selectAll(){
 		return userMapper.selectAll();
 	}
+
+	public void delete(String userId){
+		userMapper.delete(userId);
+	}
+
 }
