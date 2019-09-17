@@ -1,0 +1,21 @@
+<!DOCTYPE heml>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL画面</title>
+</head>
+<body>
+    <p>工事中 処理は未実装</p>
+    <form action="#" th:action="@{/sql_delete}" th:object="${InputEntity}" method="post">
+    <table>
+       <tr>
+           <td>削除キー（ユーザID）</td>
+           <td>
+               <input type="text" th:field="*{deletekey}" />
+               <button type="submit">削除</button>
+           </td>
+       </tr>
+    </table>
+    </form>
+</body>
+</html>

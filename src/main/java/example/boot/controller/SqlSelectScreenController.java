@@ -17,7 +17,7 @@ public class SqlSelectScreenController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "/sql", method = RequestMethod.GET)
+	@RequestMapping(value = "/sql_select", method = RequestMethod.GET)
 	public String showInputScreen(Model model) {
 
 		try {
