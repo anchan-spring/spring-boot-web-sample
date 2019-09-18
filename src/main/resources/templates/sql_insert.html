@@ -1,0 +1,30 @@
+<!DOCTYPE heml>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL画面</title>
+</head>
+<body>
+    <form action="#" th:action="@{/sql_insert}" method="post">
+    <table>
+       <tr>
+           <th>ユーザID</th>
+           <th>FIRST_NAME</th>
+           <th>LAST_NAME</th>
+       </tr>
+       <tr>
+           <td>
+           <input type="text"/>
+           </td>
+           <td>
+           <input type="text" />
+           </td>
+           <td>
+           <input type="text" />
+           <button type="submit">挿入</button>
+           </td>
+       </tr>
+    </table>
+    </form>
+</body>
+</html>
