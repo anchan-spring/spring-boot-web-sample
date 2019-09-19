@@ -5,13 +5,13 @@
   <title>SQL画面</title>
 </head>
 <body>
-    <form action="#" th:action="@{/sql_delete}" th:object="${InputEntity}" method="post">
+    <form action="#" th:action="@{/sql_select}" th:object="${InputEntity}" method="post">
     <table>
        <tr>
            <td>削除キー（ユーザID）</td>
            <td>
                <input type="text" th:field="*{deletekey}" />
-               <button type="submit">削除</button>
+               <button type="submit" name="doDelete">削除</button>
            </td>
        </tr>
     </table>

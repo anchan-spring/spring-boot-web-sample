@@ -28,7 +28,7 @@ public class SqlDeleteScreenController {
 		return "sql_delete";
 	}
 
-	@RequestMapping(value = "/sql_delete", method = RequestMethod.POST)
+	@RequestMapping(value = "/sql_select",name="doDelete" ,method = RequestMethod.POST)
 	public String delete(@ModelAttribute("InputEntity") InputEntity form,Model model) {
 
 	  //削除処理

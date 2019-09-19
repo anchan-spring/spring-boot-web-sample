@@ -5,23 +5,26 @@
   <title>SQL画面</title>
 </head>
 <body>
-    <form action="#" th:action="@{/sql_insert}" method="post">
+    <form action="#" th:action="@{/sql_select}" th:object="${InputEntity}" method="post">
     <table>
        <tr>
            <th>ユーザID</th>
            <th>FIRST_NAME</th>
            <th>LAST_NAME</th>
+           <td></td>
        </tr>
        <tr>
            <td>
-           <input type="text"/>
+           <input type="text" th:field="*{userId}"/>
            </td>
            <td>
-           <input type="text" />
+           <input type="text" th:field="*{firstName}"/>
            </td>
            <td>
-           <input type="text" />
-           <button type="submit">挿入</button>
+           <input type="text" th:field="*{lastName}"/>
+           </td>
+           <td>
+           <button type="submit" name="doInsert">挿入</button>
            </td>
        </tr>
     </table>

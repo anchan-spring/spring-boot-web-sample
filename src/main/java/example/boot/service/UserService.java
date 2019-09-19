@@ -22,4 +22,8 @@ public class UserService {
 		userMapper.delete(userId);
 	}
 
+	public void insert(String userId, String firstName, String lastName){
+		userMapper.insert(userId, firstName, lastName);
+	}
+
 }
